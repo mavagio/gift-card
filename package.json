@@ -1,0 +1,30 @@
+{
+  "name": "mean-ts",
+  "version": "1.0.0",
+  "description": "- MongoDB - Angular 4 - Express - Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd server && npm run test && cd ../client && npm run lint && cd ../",
+    "start": "npm run install:server && cd server && npm run start:heroku",
+    "install:dependencies": "npm run install:server && npm run install:client",
+    "buildclient": "cd client && npm run build && cd ../",
+    "install:client": "cd client && npm i && cd ../",
+    "install:server": "cd server && npm install && cd ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinavagyan/mean-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinavagyan/mean-ts/issues"
+  },
+  "engines": {
+    "node": "9.5.0"
+  },
+  "homepage": "https://github.com/martinavagyan/mean-ts#readme",
+  "dependencies": {
+    "@types/morgan": "^1.7.35"
+  }
+}
