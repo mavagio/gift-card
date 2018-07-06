@@ -1,13 +1,22 @@
 <app-header></app-header>
 <div class="container">
+  <h1>
+    Events
+  </h1>
   <div class="row">
-    <div class="col-sm-6">
-      <div class="well">
-        <h3><span class="fa fa-user"></span> Local</h3>
-        <p>
-          <strong>id</strong> {{userData.id}}<br>
-          <strong>email</strong> {{userData.email}}<br>
-        </p>
+    <ng-container *ngFor="let card of cards">
+      <div class="col-sm-3">
+        <mat-card class="gift-card">
+          <h3>{{card.title}}</h3>
+          <h5>{{card.info}}</h5>
+        </mat-card>
+      </div>
+    </ng-container>
+    <div class="col-sm-3" routerLink="/signup">
+      <div class = "add-card-btn">
+        Create new event
+        <br/>
+        <span class ="add-icon">+</span>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ApiRequestsService} from "../../services/api-requests.service";
 import {AuthService} from "../../auth/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -9,24 +10,34 @@ import {AuthService} from "../../auth/auth.service";
 })
 export class ProfileComponent implements OnInit {
 
-  public testEntries: any = [];
+  public cards: any = [];
   public userData: any = {};
 
   constructor(private apiRequestsService: ApiRequestsService,
-              private authService: AuthService) { }
+              private authService: AuthService,
+              public router: Router) {
+  }
 
   ngOnInit() {
     this.apiRequestsService.getUser(this.authService.getUserId()).subscribe(response => {
       this.userData = response.local;
       this.userData.id = this.authService.getUserId();
+      this.getCardsForUser();
     });
   }
+  public createNewEvent() {
 
-  logout() {
-    this.authService.logout();
   }
 
-  public getTests(): void {
-    this.apiRequestsService.getTests().subscribe(response => this.testEntries = response);
+  private getCardsForUser(): void {
+    this.cards.push(
+      {
+        title: "Ann's bday",
+        info: "We do this together"
+      },
+      {
+        title: "Xmas for Martin",
+        info: "Lets get him happy"
+      })
   }
 }

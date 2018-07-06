@@ -1,0 +1,38 @@
+.gift-card {
+  max-height: 300px;
+}
+
+
+
+
+.parent-vertical-center {
+  position: relative;
+}
+
+.child-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+
+.add-card-btn {
+  border: thin dotted grey;
+  background-color: rgba(1, 1, 1, 0);
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.add-card-btn:hover {
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+.add-icon {
+  font-size:4em;
+  color: rgb(117, 117, 117);
+  font-weight: 200;
+  text-align: center;
+  margin: 0 auto;
+}

@@ -6,9 +6,9 @@
   <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item disabled = "{{userData}}">
       <mat-icon>account_circle</mat-icon>
-      <span>Hi {{userData.email}}</span>
+      <span>Hi {{userData?.email}}</span>
     </button>
     <button mat-menu-item (click)="logout()">
     <mat-icon>exit_to_app</mat-icon>
