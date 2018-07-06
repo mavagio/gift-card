@@ -1,0 +1,22 @@
+.main-form-card {
+  padding: 30px;
+}
+
+.login-button {
+  float: right;
+}
+
+.form-input {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.parent-vertical-center {
+  position: relative;
+}
+
+.child-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+}

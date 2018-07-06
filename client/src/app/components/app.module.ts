@@ -30,6 +30,7 @@ import {
   MatToolbarModule, MatDatepickerModule, MatExpansionModule, MatNativeDateModule, MatPaginatorModule, MatSortModule,
   MatStepperModule, MatTableModule,
 } from '@angular/material';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {
     HomeComponent,
     ProfileComponent,
     PageNotFoundComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,

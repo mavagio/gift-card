@@ -1,0 +1,18 @@
+<header class = "main-header">
+  <button mat-button class = "dp36" id = "logo-btn">
+    Copark
+  </button>
+  <button mat-icon-button class = "menu-btn dp36" [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+      <span>Hi {{userData.email}}</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+    </button>
+  </mat-menu>
+</header>
